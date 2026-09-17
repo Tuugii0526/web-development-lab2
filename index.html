@@ -4,120 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Бүртгэлийн анкет</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f9;
-            margin: 0;
-            padding: 0;
-            color: #333;
-        }
-
-        header {
-            background-color: #3b82f6;
-            color: white;
-            padding: 1.5rem;
-            text-align: center;
-        }
-
-        main {
-            max-width: 500px;
-            margin: 2rem auto;
-            background: white;
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        h2 {
-            margin-top: 0;
-            text-align: center;
-            color: #1f2937;
-        }
-
-        .form-group {
-            margin-bottom: 1.2rem;
-        }
-
-        label {
-            display: block;
-            margin-bottom: 0.5rem;
-            font-weight: bold;
-            color: #4b5563;
-        }
-
-        input[type="text"],
-        input[type="email"],
-        input[type="password"],
-        input[type="date"],
-        select {
-            width: 100%;
-            padding: 0.7rem;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            font-size: 1rem;
-            box-sizing: border-box;
-        }
-
-        input:focus, select:focus {
-            outline: none;
-            border-color: #3b82f6;
-            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
-        }
-
-        /* Radio and Checkbox Styling */
-        .radio-group, .checkbox-group {
-            display: flex;
-            gap: 1.5rem;
-            flex-wrap: wrap;
-            padding: 0.5rem 0;
-        }
-
-        .option-label {
-            display: flex;
-            align-items: center;
-            gap: 0.4rem;
-            font-weight: normal;
-            cursor: pointer;
-        }
-
-        .option-label input {
-            cursor: pointer;
-        }
-
-        .helper-text {
-            font-size: 0.8rem;
-            color: #6b7280;
-            margin-top: 0.25rem;
-        }
-
-        button {
-            width: 100%;
-            padding: 0.8rem;
-            background-color: #3b82f6;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            font-size: 1rem;
-            font-weight: bold;
-            cursor: pointer;
-            margin-top: 1rem;
-            transition: background 0.2s;
-        }
-
-        button:hover {
-            background-color: #2563eb;
-        }
-
-        footer {
-            background-color: #1f2937;
-            color: #9ca3af;
-            text-align: center;
-            padding: 1.5rem;
-            margin-top: auto;
-            font-size: 0.9rem;
-        }
-    </style>
 </head>
 <body>
 
@@ -133,8 +19,8 @@
         <form action="#" method="POST">
             
             <!-- 1. Text Input (Овог нэр) -->
-            <div class="form-group">
-                <label for="fullname">Овог нэр:</label>
+            <div>
+                <label for="fullname">Овог нэр:</label><br>
                 <input 
                     type="text" 
                     id="fullname" 
@@ -143,13 +29,15 @@
                     pattern="^[A-ЯӨҮa-яөү\s\-]{2,50}$" 
                     placeholder="Бат овогтой Болд"
                     title="Зөвхөн кирилл үсэг болон зай оруулна уу (2-50 тэмдэгт)."
-                >
-                <div class="helper-text">Кирилл үсгээр оруулна уу.</div>
+                ><br>
+                <small>Кирилл үсгээр оруулна уу.</small>
             </div>
 
+            <br>
+
             <!-- 2. Email Input (И-мэйл хаяг) -->
-            <div class="form-group">
-                <label for="email">И-мэйл хаяг:</label>
+            <div>
+                <label for="email">И-мэйл хаяг:</label><br>
                 <input 
                     type="email" 
                     id="email" 
@@ -159,9 +47,11 @@
                 >
             </div>
 
+            <br>
+
             <!-- 3. Password Input (Нууц үг) -->
-            <div class="form-group">
-                <label for="password">Нууц үг:</label>
+            <div>
+                <label for="password">Нууц үг:</label><br>
                 <input 
                     type="password" 
                     id="password" 
@@ -170,13 +60,15 @@
                     pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d\W_]{8,}$" 
                     placeholder="Нууц үгээ оруулна уу"
                     title="Дор хаяж 8 тэмдэгт, үсэг болон тоо хамт агуулсан байна."
-                >
-                <div class="helper-text">Дор хаяж 8 тэмдэгт (үсэг болон тоо хамт).</div>
+                ><br>
+                <small>Дор хаяж 8 тэмдэгт (үсэг болон тоо хамт).</small>
             </div>
 
+            <br>
+
             <!-- 4. Date Input (Төрсөн огноо) -->
-            <div class="form-group">
-                <label for="birthdate">Төрсөн огноо:</label>
+            <div>
+                <label for="birthdate">Төрсөн огноо:</label><br>
                 <input 
                     type="date" 
                     id="birthdate" 
@@ -185,9 +77,11 @@
                 >
             </div>
 
+            <br>
+
             <!-- 5. Select Dropdown (Оршин суугаа хот/аймаг) -->
-            <div class="form-group">
-                <label for="location">Оршин суугаа газар:</label>
+            <div>
+                <label for="location">Оршин суугаа газар:</label><br>
                 <select id="location" name="location" required>
                     <option value="" disabled selected hidden>Сонгоно уу...</option>
                     <option value="ub">Улаанбаатар</option>
@@ -197,39 +91,41 @@
                 </select>
             </div>
 
+            <br>
+
             <!-- 6. Radio Input (Хүйс) -->
-            <div class="form-group">
-                <label>Хүйс:</label>
-                <div class="radio-group">
-                    <label class="option-label" for="gender-male">
-                        <input type="radio" id="gender-male" name="gender" value="male" required>
-                        Эрэгтэй
-                    </label>
-                    <label class="option-label" for="gender-female">
-                        <input type="radio" id="gender-female" name="gender" value="female">
-                        Эмэгтэй
-                    </label>
-                </div>
+            <div>
+                <label>Хүйс:</label><br>
+                <label for="gender-male">
+                    <input type="radio" id="gender-male" name="gender" value="male" required>
+                    Эрэгтэй
+                </label>
+                <label for="gender-female">
+                    <input type="radio" id="gender-female" name="gender" value="female">
+                    Эмэгтэй
+                </label>
             </div>
 
+            <br>
+
             <!-- 7. Checkbox Input (Сонирхол) -->
-            <div class="form-group">
-                <label>Сонирхол:</label>
-                <div class="checkbox-group">
-                    <label class="option-label" for="interest-sports">
-                        <input type="checkbox" id="interest-sports" name="interest" value="sports">
-                        Спорт
-                    </label>
-                    <label class="option-label" for="interest-reading">
-                        <input type="checkbox" id="interest-reading" name="interest" value="reading">
-                        Ном унших
-                    </label>
-                    <label class="option-label" for="interest-coding">
-                        <input type="checkbox" id="interest-coding" name="interest" value="coding">
-                        Код бичих
-                    </label>
-                </div>
+            <div>
+                <label>Сонирхол:</label><br>
+                <label for="interest-sports">
+                    <input type="checkbox" id="interest-sports" name="interest" value="sports">
+                    Спорт
+                </label>
+                <label for="interest-reading">
+                    <input type="checkbox" id="interest-reading" name="interest" value="reading">
+                    Ном унших
+                </label>
+                <label for="interest-coding">
+                    <input type="checkbox" id="interest-coding" name="interest" value="coding">
+                    Код бичих
+                </label>
             </div>
+
+            <br>
 
             <button type="submit">Бүртгүүлэх</button>
         </form>
